@@ -1,0 +1,7 @@
+## Attendance Plus
+
+.
+
+#### License
+
+MIT
