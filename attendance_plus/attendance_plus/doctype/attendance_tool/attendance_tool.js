@@ -184,13 +184,13 @@ frappe.ui.form.on('Attendance Tool', {
 					var employee_leave_without_payment = [];
 					$(me.wrapper).find('input[type="checkbox"]').each(function(i, check) {
 						if($(check).is(":checked")) {
-							employee_leave_withought_payment.push(employee[i]);
+							employee_leave_without_payment.push(employee[i]);
 						}
 					});
 					frappe.call({
 						method: "attendance_plus.attendance_plus.doctype.attendance_tool.attendance_tool.mark_employee_attendance",
 						args:{
-							"employee_list":employee_leave_withought_payment,
+							"employee_list":employee_leave_without_payment,
 							"status":"Leave Without Payment",
 							"date":frm.doc.date,
 							"leave_type":"Leave Without Payment",
